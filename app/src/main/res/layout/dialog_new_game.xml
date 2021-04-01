@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:padding="?attr/dialogPreferredPadding"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_player_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiet_first_player"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:hintEnabled="false"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstPlayerName"
+                android:hint="@string/First_player_nickname"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:padding="@dimen/padding_small">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiet_second_player"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:hintEnabled="false"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSecondPlayerName"
+                android:hint="@string/second_player_nickname"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:padding="@dimen/padding_small">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/cancelButton"
+        style="?attr/buttonBarPositiveButtonStyle"
+        android:textColor="@color/purple_500"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="@dimen/margin_3xlarge"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/createButton"
+        app:layout_constraintEnd_toStartOf="@+id/createButton"
+        android:layout_marginEnd="@dimen/margin_3xlarge" />
+
+    <Button
+        android:id="@+id/createButton"
+        style="?attr/buttonBarPositiveButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/create"
+        android:textColor="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_player_names"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/margin_small" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
